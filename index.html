@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#12372d">
+  <title>The Everyday Icon Survey</title>
+  <meta name="description" content="A polished independent handbag preference survey and prize draw concept.">
+  <style>
+    :root{--green:#12372d;--green2:#1d4d3f;--cream:#f6f0e6;--paper:#fffdf8;--burgundy:#7f2438;--ink:#17221d;--muted:#6c756f;--line:#ded8cd;--gold:#c6a15b}
+    *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}button,input{font:inherit}
+    .shell{min-height:100vh;display:grid;grid-template-columns:minmax(310px,42%) 1fr}.visual{position:relative;overflow:hidden;background:var(--green);min-height:100vh}.visual img{width:100%;height:100%;object-fit:cover;display:block}.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,45,36,.06),rgba(15,45,36,.54))}.brand{position:absolute;z-index:2;left:42px;top:36px;color:white;font-family:Georgia,serif;font-size:1.15rem;letter-spacing:.16em;text-transform:uppercase}.caption{position:absolute;z-index:2;left:42px;right:42px;bottom:38px;color:white}.eyebrow{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:750}.caption h2{font:400 clamp(2rem,4vw,4rem)/1 Georgia,serif;margin:.5rem 0 1rem;max-width:560px}.caption p{margin:0;max-width:450px;line-height:1.6;color:rgba(255,255,255,.86)}
+    main{display:flex;align-items:center;justify-content:center;padding:40px 7%;min-height:100vh}.card{width:min(650px,100%)}.topline{display:flex;align-items:center;justify-content:space-between;gap:16px;color:var(--muted);font-size:.85rem}.progress{height:4px;background:#ded8cd;margin:14px 0 42px;border-radius:10px;overflow:hidden}.progress span{display:block;height:100%;background:var(--burgundy);transition:width .35s ease}.kicker{color:var(--burgundy);font-weight:750;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}.step h1{font:400 clamp(2rem,4vw,3.6rem)/1.05 Georgia,serif;margin:.65rem 0 1rem;letter-spacing:-.025em}.lead{font-size:1.05rem;line-height:1.65;color:var(--muted);max-width:600px;margin:0 0 30px}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.option{border:1px solid var(--line);background:rgba(255,255,255,.62);border-radius:12px;padding:18px;text-align:left;cursor:pointer;min-height:64px;color:var(--ink);transition:.18s}.option:hover,.option:focus-visible{border-color:var(--burgundy);transform:translateY(-1px);outline:none}.option.selected{border-color:var(--burgundy);background:#fff4f5;box-shadow:inset 0 0 0 1px var(--burgundy)}.actions{display:flex;align-items:center;justify-content:space-between;margin-top:30px}.btn{border:0;border-radius:999px;padding:14px 25px;font-weight:750;cursor:pointer}.primary{background:var(--green);color:white}.primary:disabled{opacity:.35;cursor:not-allowed}.back{background:transparent;color:var(--muted);padding-left:0}.note{font-size:.78rem;line-height:1.55;color:var(--muted);margin-top:28px;border-top:1px solid var(--line);padding-top:18px}.field{display:grid;gap:8px;margin:16px 0}.field label{font-weight:700;font-size:.88rem}.field input{width:100%;padding:15px 16px;border:1px solid var(--line);border-radius:10px;background:white;outline:none}.field input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(18,55,45,.1)}.check{display:flex;gap:11px;align-items:flex-start;color:var(--muted);line-height:1.45;font-size:.85rem;margin-top:18px}.check input{margin-top:3px;accent-color:var(--green)}.winner{text-align:center;position:relative}.demoPill{display:inline-block;background:#fff0c9;color:#644b13;border:1px solid #e2c16f;border-radius:999px;padding:7px 12px;font-size:.72rem;font-weight:800;letter-spacing:.12em}.gift{width:min(260px,72vw);aspect-ratio:1;margin:20px auto;border-radius:50%;background:radial-gradient(circle,#fff 0 52%,#efe4d4 53% 67%,transparent 68%);display:grid;place-items:center}.gift img{width:78%;height:78%;object-fit:cover;border-radius:50%;filter:drop-shadow(0 15px 18px rgba(24,35,29,.18))}.winner h1{color:var(--green)}.claim{display:grid;gap:9px;max-width:430px;margin:25px auto 0;background:var(--green);color:white;border-radius:16px;padding:20px}.claim strong{font:400 1.4rem Georgia,serif}.claim span{font-size:.82rem;color:rgba(255,255,255,.72)}.confetti{position:fixed;top:-20px;width:9px;height:14px;z-index:10;animation:fall 3.2s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.15}}.hidden{display:none!important}.legal{position:fixed;right:20px;bottom:14px;font-size:.7rem;color:#7c847f;background:rgba(246,240,230,.85);padding:5px 8px;border-radius:4px;z-index:5}
+    @media(max-width:800px){.shell{display:block}.visual{min-height:35vh;height:35vh}.brand{left:22px;top:22px}.caption{left:22px;bottom:20px}.caption h2{font-size:2rem;margin-bottom:.4rem}.caption p{display:none}main{padding:34px 22px;min-height:65vh;align-items:flex-start}.progress{margin-bottom:30px}.options{grid-template-columns:1fr}.legal{position:static;text-align:center;padding:16px;background:transparent}.step h1{font-size:2.25rem}}
+    button{touch-action:manipulation;-webkit-tap-highlight-color:transparent;position:relative;z-index:6}main{position:relative;z-index:3}.card{position:relative;z-index:4}
+    .spinScreen{text-align:center}.wheelWrap{width:min(420px,82vw);aspect-ratio:1;margin:30px auto;position:relative;display:grid;place-items:center}.wheel{position:absolute;inset:0;overflow:hidden;border-radius:50%;border:12px solid var(--paper);outline:3px solid var(--gold);box-shadow:0 24px 55px rgba(18,55,45,.24),inset 0 0 0 2px rgba(255,255,255,.35);background:conic-gradient(from -22.5deg,#7f2438 0 45deg,#ead7bb 45deg 90deg,#17483b 90deg 135deg,#d2a354 135deg 180deg,#8f3147 180deg 225deg,#efe4d4 225deg 270deg,#12372d 270deg 315deg,#c89345 315deg 360deg);transition:transform 7s cubic-bezier(.12,.68,.08,1)}.wheel:before{content:"";position:absolute;inset:3%;border:1px solid rgba(255,255,255,.48);border-radius:50%;pointer-events:none}.wheel:after{content:"";position:absolute;left:50%;top:50%;width:25%;aspect-ratio:1;transform:translate(-50%,-50%);border:2px solid rgba(255,255,255,.55);border-radius:50%;pointer-events:none}.wheel span{position:absolute;z-index:2;display:grid;place-items:center;width:25%;min-height:42px;transform:translate(-50%,-50%);text-align:center;text-wrap:balance;color:white;font-size:clamp(.62rem,1.65vw,.78rem);font-weight:900;line-height:1.08;letter-spacing:.025em;text-shadow:0 1px 2px rgba(0,0,0,.38)}.wheel span:nth-child(1){left:50%;top:16%}.wheel span:nth-child(2){left:74%;top:26%}.wheel span:nth-child(3){left:84%;top:50%}.wheel span:nth-child(4){left:74%;top:74%}.wheel span:nth-child(5){left:50%;top:84%}.wheel span:nth-child(6){left:26%;top:74%}.wheel span:nth-child(7){left:16%;top:50%}.wheel span:nth-child(8){left:26%;top:26%}.wheel span:nth-child(2),.wheel span:nth-child(6){color:#30291f;text-shadow:0 1px 1px rgba(255,255,255,.45)}.pointer{position:absolute;z-index:7;top:-13px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:20px solid transparent;border-right:20px solid transparent;border-top:42px solid var(--gold);filter:drop-shadow(0 4px 3px rgba(0,0,0,.2))}.spinButton{z-index:6;width:96px;height:96px;border-radius:50%;border:8px solid var(--paper);outline:2px solid var(--gold);background:var(--green);color:white;font-family:Georgia,serif;font-size:1.05rem;font-weight:900;letter-spacing:.1em;box-shadow:0 8px 24px rgba(0,0,0,.3);cursor:pointer}.spinButton:disabled{opacity:.82;cursor:wait}
+    @media(max-width:500px){.wheelWrap{width:min(330px,84vw);margin:22px auto}.wheel{border-width:9px;outline-width:2px}.wheel span{width:27%;min-height:36px;font-size:clamp(.52rem,2.25vw,.65rem);line-height:1.05;letter-spacing:0}.spinButton{width:76px;height:76px;border-width:6px;font-size:.88rem}.pointer{top:-10px;border-left-width:16px;border-right-width:16px;border-top-width:34px}}
+    .productStrip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0}.productCard{display:block;text-decoration:none;color:var(--ink);background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.18s}.productCard:hover{border-color:var(--burgundy);transform:translateY(-2px)}.productCard img{display:block;width:100%;aspect-ratio:1;object-fit:contain;background:#f5f5f3;padding:7px}.productInfo{padding:10px}.productInfo strong{display:block;font:400 .88rem/1.25 Georgia,serif}.productInfo span{display:block;color:var(--burgundy);font-size:.85rem;font-weight:800;margin-top:4px}.priceStamp{font-size:.7rem;color:var(--muted);margin-top:-14px;margin-bottom:24px}.officialPrize{object-fit:contain!important;background:#f5f5f3;padding:12px}@media(max-width:540px){.productStrip{gap:6px}.productInfo{padding:7px}.productInfo strong{font-size:.72rem}.productInfo span{font-size:.75rem}}
+    @media(max-width:800px){html{scroll-behavior:smooth}body{overflow-x:hidden}.shell{min-height:100svh}.visual{height:26svh;min-height:190px;max-height:250px}.visual img{object-position:center 48%}.brand{left:18px;top:16px;font-size:.78rem;letter-spacing:.13em}.caption{left:18px;right:18px;bottom:16px}.caption .eyebrow{font-size:.62rem}.caption h2{font-size:1.6rem;line-height:1.02;margin:.3rem 0 0}.survey-active .visual{display:none}.survey-active main{min-height:100svh}.survey-active .legal{display:none}main{padding:20px 16px calc(24px + env(safe-area-inset-bottom));min-height:74svh}.card{width:100%}.topline{font-size:.78rem}.progress{margin:9px 0 24px;height:5px}.step h1{font-size:clamp(1.78rem,8.4vw,2.3rem);line-height:1.08;margin:.5rem 0 .8rem}.lead{font-size:.96rem;line-height:1.52;margin-bottom:20px}.kicker{font-size:.7rem}.productStrip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:18px -16px 18px;padding:0 16px 5px;scrollbar-width:none}.productStrip::-webkit-scrollbar{display:none}.productCard{flex:0 0 min(42vw,156px);scroll-snap-align:start}.productInfo{padding:9px}.productInfo strong{font-size:.78rem}.productInfo span{font-size:.82rem}.priceStamp{margin-top:-8px;margin-bottom:18px;font-size:.68rem}.btn{min-height:52px;padding:14px 20px}.welcome .primary,#welcome>.primary{width:100%}.options{gap:10px}.option{min-height:58px;padding:14px 15px;font-size:.95rem}.actions{position:sticky;bottom:0;z-index:20;margin:24px -16px -20px;padding:14px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(246,240,230,0),rgba(246,240,230,.96) 20%);backdrop-filter:blur(8px);gap:10px}.actions .back{width:34%;background:rgba(255,255,255,.72)}.actions .primary{width:66%}.field{margin:13px 0}.field input{min-height:52px;font-size:16px}.check{font-size:.82rem}.wheelWrap{width:min(320px,86vw);margin:20px auto}.wheel span{transform:rotate(var(--angle)) translateY(-31vw) rotate(calc(var(--angle)*-1));font-size:.58rem}.spinButton{width:78px;height:78px}.gift{width:min(230px,68vw);margin:16px auto}.winner .actions{position:static;margin:22px 0 0;padding:0;background:none;backdrop-filter:none}.winner .actions .primary{width:100%}.claim{padding:17px;margin-top:20px}.legal{position:static;text-align:center;padding:14px 16px;background:transparent}}
+    @media(max-width:360px){main{padding-inline:13px}.productStrip{margin-inline:-13px;padding-inline:13px}.actions{margin-inline:-13px;padding-inline:13px}.wheelWrap{width:86vw}.wheel span{font-size:.5rem}.spinButton{width:70px;height:70px}.gift{width:min(205px,62vw)}}
+    .pickerGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}.pickCard{border:1px solid var(--line);border-radius:14px;background:white;padding:8px;text-align:left;cursor:pointer;color:var(--ink)}.pickCard img{display:block;width:100%;aspect-ratio:1;object-fit:contain;background:#f5f5f3;border-radius:9px}.pickCard strong{display:block;font:400 .92rem/1.2 Georgia,serif;margin:10px 4px 3px}.pickCard span{display:block;color:var(--muted);font-size:.75rem;margin:0 4px 5px}.pickCard.selected{border-color:var(--burgundy);box-shadow:inset 0 0 0 1px var(--burgundy);background:#fff7f7}.colourRow{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 22px}.colourChoice{border:1px solid var(--line);background:white;border-radius:999px;padding:9px 13px;display:flex;align-items:center;gap:8px;cursor:pointer}.colourChoice.selected{border-color:var(--burgundy);box-shadow:inset 0 0 0 1px var(--burgundy)}.swatch{width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.15)}.selectionSummary{background:white;border:1px solid var(--line);border-radius:14px;padding:16px;margin:20px 0}.selectionSummary div{display:flex;justify-content:space-between;gap:16px;padding:6px 0}.selectionSummary span{color:var(--muted)}.successBox{background:#edf5f0;border:1px solid #a9c8b8;border-radius:18px;padding:24px;text-align:center}.successBox h1{margin-top:10px}@media(max-width:540px){.pickerGrid{display:flex;overflow-x:auto;margin-inline:-16px;padding:0 16px 5px;scroll-snap-type:x mandatory}.pickCard{flex:0 0 64vw;scroll-snap-align:center}.colourChoice{min-height:46px}.selectionSummary div{display:grid;gap:2px}}
+    .depositBox{background:white;border:1px solid var(--line);border-radius:18px;padding:18px}.orderRows{margin:18px 0;border-block:1px solid var(--line);padding:10px 0}.orderRows div{display:flex;justify-content:space-between;gap:18px;padding:7px 0}.orderRows span{color:var(--muted)}.realPay{background:#ffc439;color:#111;width:100%;text-decoration:none;display:flex;align-items:center;justify-content:center;margin-top:16px}.realPay.disabled{opacity:.4;pointer-events:none}.paymentWarning{background:#fff7e0;border:1px solid #e7c974;border-radius:12px;padding:12px;font-size:.8rem;line-height:1.5;margin:14px 0}.welcomeActions{display:grid;gap:10px}.skipSurvey{width:100%;border:1px solid var(--green);background:transparent;color:var(--green)}@media(max-width:480px){.depositBox{padding:14px}}
+    .productStrip,.priceStamp{display:none!important}.spinComplete{margin:18px auto 0;color:var(--green);font-weight:800}.winner .claim{text-decoration:none;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}.winner .claim:hover,.winner .claim:focus-visible{transform:translateY(-2px);box-shadow:0 12px 28px rgba(18,55,45,.24);outline:3px solid rgba(198,161,91,.55);outline-offset:3px}.claimCta{font-size:.72rem!important;letter-spacing:.12em;text-transform:uppercase;color:#f3dba9!important;margin-top:3px}
+    @media(max-width:800px){.wheelWrap{width:min(330px,84vw);margin:20px auto}.wheel span{transform:translate(-50%,-50%)}.spinButton{width:76px;height:76px}}
+    .wheel{background:conic-gradient(from -18deg,#7f2438 0 36deg,#ead7bb 36deg 72deg,#17483b 72deg 108deg,#d2a354 108deg 144deg,#8f3147 144deg 180deg,#efe4d4 180deg 216deg,#12372d 216deg 252deg,#c89345 252deg 288deg,#7f2438 288deg 324deg,#ead7bb 324deg 360deg)}.wheel span{width:22%;font-size:clamp(.56rem,1.45vw,.72rem);color:white;text-shadow:0 1px 2px rgba(0,0,0,.38)}.wheel span:nth-child(1){left:50%;top:14%;width:auto;min-width:25%;padding:5px 8px;border:2px solid var(--gold);border-radius:999px;background:rgba(85,12,32,.72);box-shadow:0 4px 12px rgba(0,0,0,.18)}.wheel span:nth-child(2){left:71%;top:20%}.wheel span:nth-child(3){left:84%;top:37%}.wheel span:nth-child(4){left:84%;top:63%}.wheel span:nth-child(5){left:71%;top:80%}.wheel span:nth-child(6){left:50%;top:86%}.wheel span:nth-child(7){left:29%;top:80%}.wheel span:nth-child(8){left:16%;top:63%}.wheel span:nth-child(9){left:16%;top:37%}.wheel span:nth-child(10){left:29%;top:20%}.wheel span:nth-child(2),.wheel span:nth-child(6),.wheel span:nth-child(10){color:#30291f;text-shadow:0 1px 1px rgba(255,255,255,.45)}.spinButton{width:84px;height:84px}@media(max-width:500px){.wheel span{width:23%;font-size:clamp(.47rem,2vw,.58rem)}.wheel span:nth-child(1){min-width:24%;padding:4px 6px}.spinButton{width:76px;height:76px;font-size:.72rem;letter-spacing:.04em}}
+    .wheel span:nth-child(1){width:22%;min-width:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+    .wheel span.bagLabel{width:auto;min-width:25%;padding:5px 8px;border:2px solid var(--gold);border-radius:999px;background:rgba(85,12,32,.72);box-shadow:0 4px 12px rgba(0,0,0,.18)}
+    @media(max-width:500px){.wheel span:nth-child(1){width:23%;min-width:0;padding:0}.wheel span.bagLabel{width:auto;min-width:24%;padding:4px 6px}}
+    @media(max-width:800px){
+      .visual{height:344px;min-height:344px;max-height:none;padding-top:48px;background:#fff}
+      .visual img{height:296px;object-position:center 34%}
+      .visual:after{top:48px;background:linear-gradient(180deg,rgba(15,45,36,.02) 35%,rgba(15,45,36,.72) 100%)}
+      .brand{left:0;right:0;top:0;height:48px;display:flex;align-items:center;justify-content:center;background:#fff;color:var(--ink);font-size:.94rem;font-weight:600;letter-spacing:.24em;box-shadow:0 1px 0 rgba(23,34,29,.12)}
+      .caption{left:20px;right:20px;bottom:18px}
+      .caption .eyebrow{font-size:.66rem;letter-spacing:.2em}
+      .caption h2{font-size:1.72rem;line-height:1.02;margin:.38rem 0 0;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="visual">
+<img src="handbag-editorial.png" alt="Burgundy tote bag in an elegant studio setting">
+<div class="brand">LONGCHAMP</div>
+<div class="caption">
+<div class="eyebrow">New Collection Research</div>
+<h2>Help shape the next Le Pliage.</h2>
+<p>Share the colours, details and everyday features you would love to see in an upcoming product launch.</p>
+</div>
+</aside>
+    <main>
+<div class="card">
+      <div id="surveyTop">
+<div class="topline">
+<span>5-minute style survey</span>
+<span id="counter">Welcome</span>
+</div>
+<div class="progress">
+<span id="bar" style="width:3%">
+</span>
+</div>
+</div>
+      <section class="step" id="welcome">
+<div class="kicker">Le Pliage New Product Study</div>
+<h1>Your ideas could shape what comes next.</h1>
+<p class="lead">Answer 20 quick questions about your perfect everyday bag. Your feedback will help explore colours, features and styling for a future Le Pliage launch—then reveal your survey reward.</p>
+<div class="productStrip">
+<a class="productCard" href="https://www.longchamp.com/gb/en/products/handbag-xs-L1500HSR001.html" target="_blank" rel="noopener">
+<img src="https://www.longchamp.com/dw/image/v2/BCVX_PRD/on/demandware.static/-/Sites-LC-master-catalog/default/dw8b721161/images/DIS/L1500HSR001_0.png?sh=800&amp;sm=fit&amp;sw=800" alt="Black Le Pliage Energy XS Handbag">
+<div class="productInfo">
+<strong>Energy XS</strong>
+<span>$195 USD</span>
+</div>
+</a>
+<a class="productCard" href="https://www.longchamp.com/gb/en/products/handbag-l-L1515HSR001.html" target="_blank" rel="noopener">
+<img src="https://www.longchamp.com/dw/image/v2/BCVX_PRD/on/demandware.static/-/Sites-LC-master-catalog/default/dwb14f2631/images/DIS/L1515HSR001_0.png?sh=800&amp;sm=fit&amp;sw=800" alt="Black Le Pliage Energy L Handbag">
+<div class="productInfo">
+<strong>Energy L</strong>
+<span>$220 USD</span>
+</div>
+</a>
+<a class="productCard" href="https://www.longchamp.com/gb/en/products/handbag-xs-L1500987001.html" target="_blank" rel="noopener">
+<img src="https://www.longchamp.com/dw/image/v2/BCVX_PRD/on/demandware.static/-/Sites-LC-master-catalog/default/dw19d5b869/images/DIS/L1500987001_0.png?sh=800&amp;sm=fit&amp;sw=800" alt="Black Le Pliage Xtra XS Handbag">
+<div class="productInfo">
+<strong>Xtra XS</strong>
+<span>$400 USD</span>
+</div>
+</a>
+</div>
+<div class="priceStamp">UK reference prices checked 7 September 2026 · Tap a product to view its official page.</div>
+<div class="welcomeActions">
+<button class="btn primary" id="start" type="button">Start the product survey</button>
+<button class="btn skipSurvey" id="skipSurvey" type="button">Skip survey — go to prize wheel</button>
+</div>
+<p class="note">Complete the survey to explore the available reward experience.</p>
+</section>
+      <section class="step hidden" id="question">
+<div class="kicker" id="qKicker">
+</div>
+<h1 id="qTitle">
+</h1>
+<p class="lead" id="qLead">
+</p>
+<div class="options" id="options">
+</div>
+</section>
+      <section class="step hidden" id="entry">
+<div class="kicker">Demo participant details</div>
+<h1>Unlock your spin.</h1>
+<p class="lead">Use any sample details to preview the marketing journey. Nothing is stored or sent.</p>
+<form id="entryForm">
+<div class="field">
+<label for="name">First name</label>
+<input id="name" autocomplete="off" required placeholder="Sample name">
+</div>
+<div class="field">
+<label for="email">Email address</label>
+<input id="email" type="email" autocomplete="off" required placeholder="sample@example.com">
+</div>
+<label class="check">
+<input id="marketing" type="checkbox">
+<span>Optional: send me Le Pliage product news and launch updates.</span>
+</label>
+<div class="actions">
+<button class="btn back" type="button" id="entryBack">Back</button>
+<button class="btn primary" type="submit">Continue to the prize wheel</button>
+</div>
+</form>
+<p class="note">Reward terms and availability will be confirmed by email.</p>
+</section>
+      <section class="step hidden spinScreen" id="spin">
+<span class="demoPill">SURVEY COMPLETE ✓</span>
+<div class="kicker" style="margin-top:18px">Thank you for your feedback</div>
+<h1>Your feedback reward is ready.</h1>
+<p class="lead" style="margin-inline:auto">Spin the wheel to reveal your thank-you reward.</p>
+<div class="wheelWrap">
+<div class="pointer">
+</div>
+<div class="wheel" id="wheel" aria-label="Prize wheel">
+<span>HANDBAG</span>
+<span>$1<br>VOUCHER</span>
+<span>$5<br>VOUCHER</span>
+<span>WALLET</span>
+<span>TRAVEL<br>BAG</span>
+<span>$10<br>VOUCHER</span>
+<span>SCARF<br>SET</span>
+<span>CROSSBODY</span>
+<span>$50<br>VOUCHER</span>
+<span>TRAVEL<br>SET</span>
+</div>
+<button class="spinButton" id="spinButton" type="button">REVEAL</button>
+</div>
+<p class="note">Reward subject to availability and confirmation by email.</p>
+</section>
+      <section class="step hidden winner" id="winner">
+<span class="demoPill">YOUR THANK-YOU REWARD</span>
+<div class="gift" aria-hidden="true"><span id="prizeIcon" style="font-size:clamp(5rem,15vw,8rem)">🎁</span></div>
+<div class="kicker">Congratulations, <span id="winnerName">style lover</span>
+</div>
+<h1>You’ve unlocked a Le Pliage handbag.</h1>
+<p class="lead" style="margin-inline:auto">Choose your preferred style and colour to continue.</p>
+<a class="claim" href="shop/index.html" aria-label="Choose your bag on the independent affiliate shop">
+<strong id="prizeName">Launch reward</strong>
+<span id="prizeDetail">Choose your preferred style and colour to continue</span>
+<span class="claimCta">CHOOSE MY HANDBAG →</span>
+</a>
+<p class="note">Availability and reward details will be confirmed by email.</p>
+</section>
+      <section class="step hidden" id="checkout">
+<div class="kicker">Your preferred style</div>
+<h1>Choose the bag you love.</h1>
+<p class="lead">Select one bag style. You will choose its colour on the final payout page.</p>
+<form id="selectionForm">
+<div class="pickerGrid" id="modelPicker">
+<button class="pickCard" type="button" data-model="Le Pliage Energy XS" data-price="$195 USD">
+<img src="https://www.longchamp.com/dw/image/v2/BCVX_PRD/on/demandware.static/-/Sites-LC-master-catalog/default/dw8b721161/images/DIS/L1500HSR001_0.png?sh=800&amp;sm=fit&amp;sw=800" alt="Le Pliage Energy XS">
+<strong>Energy XS</strong>
+<span>Reference price $195 USD</span>
+</button>
+<button class="pickCard" type="button" data-model="Le Pliage Energy L" data-price="$220 USD">
+<img src="https://www.longchamp.com/dw/image/v2/BCVX_PRD/on/demandware.static/-/Sites-LC-master-catalog/default/dwb14f2631/images/DIS/L1515HSR001_0.png?sh=800&amp;sm=fit&amp;sw=800" alt="Le Pliage Energy L">
+<strong>Energy L</strong>
+<span>Reference price $220 USD</span>
+</button>
+<button class="pickCard" type="button" data-model="Le Pliage Xtra XS" data-price="$400 USD">
+<img src="https://www.longchamp.com/dw/image/v2/BCVX_PRD/on/demandware.static/-/Sites-LC-master-catalog/default/dw19d5b869/images/DIS/L1500987001_0.png?sh=800&amp;sm=fit&amp;sw=800" alt="Le Pliage Xtra XS">
+<strong>Xtra XS</strong>
+<span>Reference price $400 USD</span>
+</button>
+<button class="pickCard" type="button" data-model="Caroline Hélain x Longchamp M Tote" data-price="$380 USD">
+<img src="https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/800x800/LCH/10326HKIF72_0.webp?sig=0e9e6a1eaf238f86b9b6c107948d2f46cf879fe44dbba5f77a7f1d9f56a3a008" alt="Caroline Hélain x Longchamp M Tote">
+<strong>Caroline Hélain M Tote</strong>
+<span>$380 USD · New</span>
+</button>
+<button class="pickCard" type="button" data-model="Le Smart L Tote" data-price="$1,180 USD">
+<img src="https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/800x800/LCH/10327HJH510_0.webp?sig=a2cc08715a6b4b3c9ffedecdb03dc2588869f055a931f56a1030a6b662668516" alt="Le Smart L Tote">
+<strong>Le Smart L Tote</strong>
+<span>$1,180 USD · New</span>
+</button>
+<button class="pickCard" type="button" data-model="Le Smart S Crossbody" data-price="$650 USD">
+<img src="https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/800x800/LCH/10392HJH001_0.webp?sig=4bd2937b2cc8963aab2bef25550ac139f6982c0658ebd7d5ee9147792172c01e" alt="Le Smart S Crossbody">
+<strong>Le Smart S Crossbody</strong>
+<span>$650 USD · New</span>
+</button>
+<button class="pickCard" type="button" data-model="Le Smart XS Bucket" data-price="$650 USD">
+<img src="https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/800x800/LCH/10397HJH121_0.webp?sig=872238a62c8691c611c915972fea8f26883bd5887e11f36ef5f199770efcfaac" alt="Le Smart XS Bucket">
+<strong>Le Smart XS Bucket</strong>
+<span>$650 USD · New</span>
+</button>
+<button class="pickCard" type="button" data-model="Épure XS Tote" data-price="$595 USD">
+<img src="https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/800x800/LCH/10319HYZM81_0.webp?sig=54fa9b739808c131eadf73f1b7937db9516e3a9ee7640d25064042adcce3fe2f" alt="Épure XS Tote">
+<strong>Épure XS Tote</strong>
+<span>$595 USD · New</span>
+</button>
+<button class="pickCard" type="button" data-model="Daylong M Handbag" data-price="$1,180 USD">
+<img src="https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/800x800/LCH/10271HFKM73_0.webp?sig=a126467ad2109949eceef345e2965e86ce6f47fb8f497ca478e507a6d6c9728a" alt="Daylong M Handbag">
+<strong>Daylong M Handbag</strong>
+<span>$1,180 USD · New</span>
+</button>
+<button class="pickCard" type="button" data-model="Le Cadence L Shoulder Bag" data-price="$885 USD">
+<img src="https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/800x800/LCH/10394HJZM81_0.webp?sig=43e15b687c6af8968a5b7d2e38a6861874d232d7c89c0f3d15c3de822d42cea4" alt="Le Cadence L Shoulder Bag">
+<strong>Le Cadence L Shoulder</strong>
+<span>$885 USD · New</span>
+</button>
+<button class="pickCard" type="button" data-model="Le Cadence S Bucket" data-price="$685 USD">
+<img src="https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/800x800/LCH/10393HJZ552_0.webp?sig=c6de7d34cc15f3057cacbabd38217be4efc5c560178a35660d0253e01919919b" alt="Le Cadence S Bucket">
+<strong>Le Cadence S Bucket</strong>
+<span>$685 USD · New</span>
+</button>
+<button class="pickCard" type="button" data-model="Le Pliage Xtra M Shoulder Bag" data-price="$540 USD">
+<img src="https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/800x800/LCH/10385HJNM80_0.webp?sig=7d0e07f06527034ca0b4820af4abbb5d0970e3c8859e5e6a47347828f72b906a" alt="Le Pliage Xtra M Shoulder Bag">
+<strong>Le Pliage Xtra M</strong>
+<span>$540 USD · New</span>
+</button>
+<button class="pickCard" type="button" data-model="Looong M Shoulder Bag" data-price="$585 USD">
+<img src="https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/800x800/LCH/10384HJI072_0.webp?sig=3c48e4d763e969b06db4fb4b8bf8b4f0c96f0e9c59cfd79e0ca9f91a3d44d929" alt="Looong M Shoulder Bag">
+<strong>Looong M Shoulder</strong>
+<span>$585 USD · New</span>
+</button>
+<button class="pickCard" type="button" data-model="Re-Play S Shoulder Bag" data-price="$585 USD">
+<img src="https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/800x800/LCH/10376HJKM83_0.webp?sig=283083741414c99899907db53a3d0942dc556d1039631efe01e0c1f44089a38a" alt="Re-Play S Shoulder Bag">
+<strong>Re-Play S Shoulder</strong>
+<span>$585 USD · New</span>
+</button>
+<button class="pickCard" type="button" data-model="Le Roseau XS Handbag" data-price="$805 USD">
+<img src="https://dytbw3ui6vsu6.cloudfront.net/media/catalog/product/resize/800x800/LCH/10278HFP009_0.webp?sig=d978751225879a85026b41c179cd1165611ea74c5f61573df4b63ffa397e1059" alt="Le Roseau XS Handbag">
+<strong>Le Roseau XS Handbag</strong>
+<span>$805 USD · New</span>
+</button>
+</div>
+<div class="field">
+<label for="selectionEmail">Contact email</label>
+<input id="selectionEmail" type="email" autocomplete="email" required placeholder="you@example.com">
+</div>
+<div class="selectionSummary">
+<div>
+<span>Selected model</span>
+<strong id="selectedModel">Please choose</strong>
+</div>
+<div>
+<span>Contact method</span>
+<strong>Email follow-up</strong>
+</div>
+<div>
+<span>Payment today</span>
+<strong>None</strong>
+</div>
+</div>
+<label class="check">
+<input type="checkbox" id="selectionConsent" required>
+<span>I understand this is a follow-up request only. Availability, final price and shipping will be confirmed by email before any order.</span>
+</label>
+<div class="actions">
+<button class="btn back" id="checkoutBack" type="button">Back</button>
+<button class="btn primary" id="submitSelection" type="submit" disabled>Send my selection</button>
+</div>
+</form>
+<p class="note">Your selections remain in this browser while you complete the experience.</p>
+</section>
+      <section class="step hidden" id="selectionDone">
+<div class="successBox">
+<div class="kicker">Preference recorded in this demo</div>
+<h1>Thank you, <span id="doneName">style lover</span>.</h1>
+<p class="lead" style="margin-inline:auto">Your preferred bag is <strong id="doneChoice">
+</strong>. In a live campaign, a team member would contact <strong id="doneEmail">
+</strong> to confirm availability, final price and shipping.</p>
+<button class="btn primary" id="continueDeposit" type="button">Choose colour &amp; continue</button>
+<button class="btn back" id="doneRestart" type="button">Finish without payment</button>
+</div>
+<p class="note">No payment is required to complete the survey or submit a style preference.</p>
+</section>
+      <section class="step hidden" id="payment">
+<div class="kicker">Reserve your selection</div>
+<h1>Reserve your selected style.</h1>
+<p class="lead">Place a refundable $30 reservation deposit. Your selected style, colour, availability and final order details will be confirmed by email.</p>
+<div class="depositBox">
+<div class="field">
+<label>Choose your colour</label>
+<div class="colourRow" id="colourPicker">
+<button class="colourChoice" type="button" data-colour="Black"><i class="swatch" style="background:#171717"></i>Black</button>
+<button class="colourChoice" type="button" data-colour="Burgundy"><i class="swatch" style="background:#762a3a"></i>Burgundy</button>
+<button class="colourChoice" type="button" data-colour="Navy"><i class="swatch" style="background:#243449"></i>Navy</button>
+<button class="colourChoice" type="button" data-colour="Paper"><i class="swatch" style="background:#e8e1d3"></i>Paper</button>
+</div>
+</div>
+<div class="selectionSummary">
+<div>
+<span>Preferred bag</span>
+<strong id="paymentChoice">—</strong>
+</div>
+<div>
+<span>Selected colour</span>
+<strong id="paymentColour">Please choose</strong>
+</div>
+<div>
+<span>Reference price</span>
+<strong id="paymentPrice">—</strong>
+</div>
+<div>
+<span>Deposit due now</span>
+<strong>$30 USD</strong>
+</div>
+<div>
+<span>Shipping</span>
+<strong>FREE</strong>
+</div>
+<div>
+<span>Remaining balance</span>
+<strong>Confirmed later</strong>
+</div>
+</div>
+<div class="paymentWarning">
+<strong>Reservation details:</strong> The refundable $30 deposit is not the full handbag price. Availability and final order details will be confirmed by email.</div>
+<label class="check">
+<input type="checkbox" id="depositConsent">
+<span>I understand that I am paying a refundable $30 reservation deposit and that the final order details will be confirmed by email.</span>
+</label>
+<a class="btn realPay disabled" id="paypalButton" href="https://www.paypal.com/ncp/payment/CWNMKFEMANKAC" target="_blank" rel="noopener">RESERVE WITH PAYPAL — $30</a>
+</div>
+<button class="btn back" id="paymentBack" type="button">Back to my selection</button>
+<p class="note">PayPal securely processes the refundable reservation deposit.</p>
+</section>
+    </div>
+</main>
+  </div>
+<div class="legal">Independent affiliate website · We may earn a commission from qualifying purchases made through our links.</div>
+  <script src="app.js" defer>
+</script>
+</body>
+</html>
