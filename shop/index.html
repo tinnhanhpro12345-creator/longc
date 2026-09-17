@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Longchamp | Independent Affiliate</title>
+  <title>Longchamp Bag Edit | Independent Affiliate</title>
   <meta name="description" content="An independent affiliate edit linking directly to the official Longchamp US website.">
   <style>
     :root{--ink:#141414;--muted:#6e6e6e;--line:#dedede;--lime:#a7e960;--paper:#fff;--tile:#f3f3f3}
@@ -17,8 +17,9 @@
     .swatches{min-height:19px;flex-wrap:nowrap;gap:7px;overflow:hidden}.swatch{padding:0;cursor:pointer;flex:0 0 auto}.swatch.active{box-shadow:0 0 0 2px #111}.swatch:hover{transform:scale(1.12)}.more-colours{flex:0 0 auto;align-self:center;font-size:13px;line-height:17px;white-space:nowrap}
     /* Compact mobile chrome so more of the catalogue stays in the first viewport. */
     @media(max-width:780px){
+      .store-chrome{display:block;position:sticky;top:0;z-index:70;box-shadow:0 1px 5px rgba(16,37,42,.14)}
       header{position:static}
-      .notice{min-height:28px;padding:5px 34px 5px 10px;font-size:11px;line-height:1.25}
+      .notice{position:relative;min-height:28px;padding:5px 34px 5px 10px;font-size:11px;line-height:1.25;box-shadow:none}
       .notice span{right:10px}
       .affiliate{padding:6px 10px;font-size:11px;line-height:1.25}
       .affiliate strong{margin-bottom:2px}
@@ -33,14 +34,19 @@
       .official,.details-btn{margin-top:8px}
       .foot{padding:28px 18px 34px}
     }
+    .store-chrome{display:contents}body{background:#edf3fc}.notice,.affiliate,header,main,.foot{width:min(1480px,100%);margin-inline:auto;background-color:#fff}.notice{background-color:var(--lime)}.affiliate{background-color:#111}@media(max-width:780px){.store-chrome{display:block;position:sticky;top:0;z-index:70}}@media(max-width:520px){.notice,.affiliate,header,main,.foot{width:min(430px,100%)}header,main,.foot{box-shadow:0 0 0 1px rgba(16,37,42,.08)}}
+    h1,h2,h3,.name,.product-title{text-wrap:balance;word-break:normal;overflow-wrap:normal;hyphens:none}
+    p,.meta,.product-copy,.affiliate,.notice{text-wrap:pretty;word-break:normal;overflow-wrap:break-word;hyphens:none}
+    button,.badge,.nav,.toolbar{word-break:normal;overflow-wrap:normal;hyphens:none}
+    .price,.more-colours{white-space:nowrap;word-break:keep-all;overflow-wrap:normal}
   </style>
 </head>
 <body>
-  <div class="notice"><b>Your handbag reward is ready — choose your preferred style and colour.</b><span>×</span></div>
+  <div class="store-chrome"><div class="notice"><b>Your launch reward is unlocked — choose a preferred style and colour for fulfilment when the new collection launches.</b><span>×</span></div>
   <header>
     <div class="head"><input id="search" class="search" aria-label="Search products" placeholder="Search"><div class="brand"><div class="brand-name">LONGCHAMP</div><div class="brand-sub">AFFILIATE CURATION</div></div><div class="icons"><button aria-label="Store locator">⌖</button><button aria-label="Wishlist">♡</button><button aria-label="Saved items">▢</button></div></div>
     <nav class="nav"><a href="#catalog">New</a><a href="#catalog">Bags</a><a href="#catalog">Le Pliage</a><a href="#catalog">Leather</a><a href="#catalog">Canvas</a><a href="https://www.longchamp.com/us/en/" target="_blank" rel="sponsored noopener">Official store ↗</a></nav>
-  </header>
+  </header></div>
   <main id="catalog">
     <div class="toolbar"><div class="toolbar-left">BAGS <span aria-hidden="true">⌄</span></div><div class="tools"><span class="count"><b id="resultCount">12</b> curated products</span><button class="filter-btn" id="filterOpen">Filter & sort</button><div class="view-switch" aria-label="Products per row"><button class="view-btn active" id="viewTwo" aria-label="Show 2 products per row" aria-pressed="true">2</button><button class="view-btn" id="viewFour" aria-label="Show 4 products per row" aria-pressed="false">4</button></div></div></div>
     <section class="grid" id="grid" aria-live="polite"></section><div class="empty" id="empty">No matching products found.</div>
